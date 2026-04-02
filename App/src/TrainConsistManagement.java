@@ -5,25 +5,36 @@ public class TrainConsistManagement {
 
     public static void main(String[] args) {
 
-        // Welcome Banner
-        System.out.println("=====================================");
-        System.out.println("=== Train Consist Management App ===");
-        System.out.println("=====================================\n");
+        System.out.println("========================================");
+        System.out.println("=== UC2 - Add Passenger Bogies to Train ===");
+        System.out.println("========================================\n");
 
-        // Create dynamic list for bogies
-        List<String> trainConsist = new ArrayList<>();
+        // Create ArrayList
+        List<String> passengerBogies = new ArrayList<>();
 
-        // Initialization message
-        System.out.println("Train initialized successfully...");
+        // ---- CREATE (Add bogies) ----
+        passengerBogies.add("Sleeper");
+        passengerBogies.add("AC Chair");
+        passengerBogies.add("First Class");
 
-        // Display initial bogie count
-        System.out.println("Initial Bogie Count : " + trainConsist.size());
+        // Display after insertion
+        System.out.println("After Adding Bogies:");
+        System.out.println(passengerBogies);
 
-        // Display current train consist
-        System.out.println("Current Train Consist : " + trainConsist);
+        // ---- DELETE (Remove bogie) ----
+        passengerBogies.remove("AC Chair");
 
-        // Ready message
-        System.out.println("\nSystem ready for operations...");
+        System.out.println("\nAfter Removing 'AC Chair':");
+        System.out.println(passengerBogies);
+
+        // ---- READ (Check existence) ----
+        boolean exists = passengerBogies.contains("Sleeper");
+
+        System.out.println("\nDoes 'Sleeper' exist? " + exists);
+
+        // Final state
+        System.out.println("\nFinal Train Consist:");
+        System.out.println(passengerBogies);
     }
 }
 
